@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@import './mixins/grids';
+@import './mixins/breakpoints';
+
+@mixin container() {
+	width: calc(100vw - 40px);
+	max-width: 1200px;
+	margin: 0 auto;
+}

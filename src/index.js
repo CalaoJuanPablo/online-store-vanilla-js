@@ -1,3 +1,5 @@
-import './scss/styles.scss'
-console.log('Hola mundo webpack')
-document.getElementById('app').innerHTML = 'Hola Mundo desde webpack'
+import './scss/init.scss'
+import { App } from './App'
+
+const $app = document.getElementById('app')
+$app.innerHTML = App()
