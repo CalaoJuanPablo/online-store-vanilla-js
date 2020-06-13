@@ -10,5 +10,7 @@ module.exports = {
 		ecmaVersion: 11,
 		sourceType: 'module'
 	},
-	rules: {}
+	rules: {
+		code: 80
+	}
 }
