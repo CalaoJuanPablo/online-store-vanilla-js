@@ -1,8 +1,7 @@
-import { Header } from './components'
+import { Home } from './pages'
 export function App() {
 	const view = `
-		${Header()}
-		<div>Hello</div>
+		${Home()}
 	`
 
 	return view
