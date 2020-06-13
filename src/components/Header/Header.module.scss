@@ -1,0 +1,20 @@
+@import '../../scss/mixins';
+
+.Header {
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include container();
+
+	&__nav ul {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		li {
+			margin-left: 8px;
+		}
+	}
+}
