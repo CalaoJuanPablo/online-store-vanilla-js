@@ -1,5 +1,5 @@
 export * from './Header'
 export * from './Products'
 export * from './Product'
-export * from './ProductDetails'
+export * from './ProductDetailsComponent'
 export * from './Footer'
