@@ -1,0 +1,9 @@
+@import '../../scss/mixins';
+
+.Products {
+	margin-bottom: 32px;
+	gap: 32px;
+	@include container();
+	@include display-grid();
+	@include grid-template-columns(1fr);
+}

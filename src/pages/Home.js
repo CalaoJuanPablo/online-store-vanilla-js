@@ -1,10 +1,8 @@
 import { MainTemplate } from '../templates'
+import { Products } from '../components'
+
 export function Home() {
-	const view = `
-		<section class="PageHome">
-			<h1>Hello from Home</h1>
-		</section>
-	`
+	const view = Products()
 
 	return MainTemplate({ children: view })
 }

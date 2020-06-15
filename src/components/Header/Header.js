@@ -1,4 +1,4 @@
-import './Header.module.scss'
+import './Header.scss'
 
 export function Header() {
 	const view = `
