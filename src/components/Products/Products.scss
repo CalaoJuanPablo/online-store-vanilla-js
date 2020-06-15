@@ -6,4 +6,10 @@
 	@include container();
 	@include display-grid();
 	@include grid-template-columns(1fr);
+	@include media(tablet) {
+		@include grid-template-columns(1fr 1fr);
+	}
+	@include media(desktop-s) {
+		@include grid-template-columns(1fr 1fr 1fr);
+	}
 }
