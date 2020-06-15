@@ -1,0 +1,7 @@
+@import '../../scss/mixins';
+
+.Footer {
+	padding: 20px 0;
+	text-align: center;
+	@include container();
+}
