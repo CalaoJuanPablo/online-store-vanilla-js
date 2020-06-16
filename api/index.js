@@ -1,4 +1,4 @@
-export class API {
+class API {
 	constructor() {
 		this.data = [
 			{
@@ -124,3 +124,5 @@ export class API {
 
 	dropProductFromCart(productId) {}
 }
+
+export const api = new API()

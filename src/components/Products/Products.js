@@ -1,11 +1,11 @@
+import { api } from '../../../api'
 import { Product } from '../'
 import './Products.scss'
 
-export function Products(data) {
-	console.log(data)
+export function Products() {
 	const view = `
 		<main class="Products">
-			${data.data.map((product) => Product(product)).join('')}
+			${api.data.map((product) => Product(product)).join('')}
 		</main>
 	`
 
