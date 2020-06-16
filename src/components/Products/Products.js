@@ -1,11 +1,11 @@
-import { fakeData } from '../../../api'
 import { Product } from '../'
 import './Products.scss'
 
-export function Products() {
+export function Products(data) {
+	console.log(data)
 	const view = `
 		<main class="Products">
-			${fakeData.map((product) => Product(product)).join('')}
+			${data.data.map((product) => Product(product)).join('')}
 		</main>
 	`
 
