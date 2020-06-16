@@ -114,7 +114,11 @@ class API {
 	}
 
 	getProduct(productId) {
-		return this.data.filter((product) => product.id === productId)
+		const productFound = this.data.filter((product) => {
+			return product.id == productId
+		})
+		console.log(productFound)
+		return productFound
 	}
 
 	setProductInCart(productId) {
