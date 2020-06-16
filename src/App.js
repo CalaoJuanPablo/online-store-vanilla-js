@@ -1,8 +1,5 @@
-import { Home } from './pages'
-export function App() {
-	const view = `
-		${Home()}
-	`
+import { routes, Router } from './routes'
 
-	return view
+export function App(element) {
+	new Router(routes, element)
 }

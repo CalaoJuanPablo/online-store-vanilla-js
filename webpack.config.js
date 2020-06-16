@@ -8,7 +8,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 module.exports = function webpackConfig(env) {
 	let plugins = [
 		new MiniCssExtractPlugin({
-			filename: 'css/[name].css'
+			filename: 'css/main.css'
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html'

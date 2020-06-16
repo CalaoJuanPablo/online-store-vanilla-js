@@ -3,14 +3,14 @@ import { Home, ProductDetails, Cart } from '../pages'
 export const routes = [
 	{
 		path: '/',
-		template: Home
+		getTemplate: (params) => Home()
 	},
 	{
 		path: '/product/:id',
-		template: ProductDetails
+		getTemplate: (params) => ProductDetails({ productId: params.id })
 	},
 	{
 		path: '/cart',
-		template: Cart
+		getTemplate: (params) => Cart()
 	}
 ]
