@@ -1,3 +1,7 @@
+import { API } from '../../api'
+
+const dataInstance = new API()
+
 export class Router {
 	constructor(routes, element) {
 		this.routes = routes
@@ -10,8 +14,10 @@ export class Router {
 		const url = `/${urlSegments.join('/')}`
 		history.pushState({}, '', url)
 
-		console.log(matchedRoute)
-		this.element.innerHTML = matchedRoute.getTemplate(matchedRoute.params)
+		this.element.innerHTML = matchedRoute.getTemplate(
+			matchedRoute.params,
+			dataInstance
+		)
 	}
 
 	_matchUrlToRoute(urlSegments) {
