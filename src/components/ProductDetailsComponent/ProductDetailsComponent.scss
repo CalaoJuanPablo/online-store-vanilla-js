@@ -1,0 +1,35 @@
+@import '../../scss/mixins';
+
+.ProductDetailsComponent {
+	@include container();
+
+	&__name {
+		margin-bottom: 1em;
+	}
+
+	&__image {
+		width: 100%;
+		margin-bottom: 30px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		margin-bottom: 20px;
+	}
+
+	&__price {
+		width: 100%;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		span {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+}
