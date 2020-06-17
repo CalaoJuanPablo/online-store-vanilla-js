@@ -117,7 +117,7 @@ class API {
 		const productFound = this.data.filter((product) => {
 			return product.id == productId
 		})
-		console.log(productFound)
+
 		return productFound
 	}
 
