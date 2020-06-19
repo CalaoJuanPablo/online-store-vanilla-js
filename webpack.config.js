@@ -1,15 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = function webpackConfig(env) {
 	let plugins = [
-		// new MiniCssExtractPlugin({
-		// 	filename: '/css/[name].css'
-		// }),
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
 		})
@@ -57,7 +52,7 @@ module.exports = function webpackConfig(env) {
 		},
 		plugins,
 		optimization: {
-			minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin({})]
+			minimizer: [new OptimizeCSSAssetsPlugin({})]
 		}
 	}
 }
