@@ -8,7 +8,7 @@ function Product({ id, name, description, price, image }) {
 				<img src="${image}" alt="${name} image" />
 			</figure>
 			<h2 class="Product__name">
-				<a href="#">${name}</a>
+				<a href="/product/${id}">${name}</a>
 			</h2>
 			<p class="Product__description">${description}</p>
 			<div class="Product__price">

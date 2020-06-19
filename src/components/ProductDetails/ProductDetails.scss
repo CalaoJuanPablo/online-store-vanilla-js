@@ -1,6 +1,6 @@
 @import '../../scss/mixins';
 
-.ProductDetailsComponent {
+.ProductDetails {
 	margin-bottom: 30px;
 	@include container();
 	@include media(desktop-s) {
