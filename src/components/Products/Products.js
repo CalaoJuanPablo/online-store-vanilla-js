@@ -21,7 +21,7 @@ function Product({ id, name, description, price, image }) {
 	return view
 }
 
-export function Products() {
+export function Products(params, router) {
 	const view = `
 		<main class="Products">
 			${api.data.map((product) => Product(product)).join('')}

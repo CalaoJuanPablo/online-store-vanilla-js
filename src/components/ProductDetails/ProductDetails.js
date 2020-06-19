@@ -1,7 +1,7 @@
 import { api } from '../../../api'
 import './ProductDetails.scss'
 
-export function ProductDetailsComponent({ productId }) {
+export function ProductDetailsComponent({ productId }, router) {
 	const product = api.getProduct(productId)
 	const { id, name, image, description, price } = product[0]
 
