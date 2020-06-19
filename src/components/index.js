@@ -1,6 +1,5 @@
 export * from './Header'
 export * from './Products'
-export * from './Product'
 export * from './Cart'
 export * from './ProductDetailsComponent'
 export * from './Footer'

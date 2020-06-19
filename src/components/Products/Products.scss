@@ -1,5 +1,33 @@
 @import '../../scss/mixins';
 
+.Product {
+	max-width: 100%;
+
+	&__image {
+		width: 100%;
+		margin-bottom: 16px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		margin-bottom: 16px;
+	}
+
+	&__price {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		span {
+			font-weight: 700;
+			font-size: 24px;
+		}
+	}
+}
+
 .Products {
 	margin-bottom: 32px;
 	gap: 32px;
