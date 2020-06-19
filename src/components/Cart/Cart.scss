@@ -1,0 +1,65 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.Cart {
+	@include container();
+
+	h1 {
+		margin-bottom: 8px;
+		font-size: 36px;
+	}
+
+	h3 {
+		margin-bottom: 30px;
+		color: $color-gray;
+	}
+
+	&__table {
+		width: 100%;
+		max-width: 900px;
+		margin-bottom: 30px;
+
+		&--row {
+			width: 100%;
+			padding: 8px 0;
+			gap: 8px;
+			@include display-grid();
+			@include grid-template-columns(30px 70px 1fr 50px);
+			@include media(tablet) {
+				@include grid-template-columns(30px 130px 1fr 50px);
+			}
+		}
+
+		&--headerText {
+			font-weight: bold;
+			color: $color-dark;
+
+			&:last-of-type {
+				text-align: right;
+			}
+		}
+
+		&--id {
+			color: $color-gray;
+		}
+		&--image,
+		&--image img {
+			width: 100%;
+			height: auto;
+		}
+
+		&--name {
+			align-self: center;
+		}
+
+		&--price {
+			text-align: right;
+			align-self: center;
+		}
+	}
+
+	&__buyButton {
+		max-width: 900px;
+		text-align: right;
+	}
+}

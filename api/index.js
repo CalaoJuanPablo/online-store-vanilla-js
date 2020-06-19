@@ -110,7 +110,35 @@ class API {
 					'https://images.unsplash.com/photo-1535486607281-4fc90307a8bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
 			}
 		]
-		this.cart = []
+		this.cart = [
+			{
+				id: 1,
+				name: 'Headphones',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque gravida leo a pretium convallis. Nullam eu tristique mi, et cras amet.',
+				price: 199,
+				image:
+					'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
+			},
+			{
+				id: 3,
+				name: 'Coco Oil',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque gravida leo a pretium convallis. Nullam eu tristique mi, et cras amet.',
+				price: 79,
+				image:
+					'https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+			},
+			{
+				id: 4,
+				name: 'Nice Bike',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque gravida leo a pretium convallis. Nullam eu tristique mi, et cras amet.',
+				price: 199,
+				image:
+					'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1008&q=80'
+			}
+		]
 	}
 
 	getProduct(productId) {

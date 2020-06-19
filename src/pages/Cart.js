@@ -1,7 +1,8 @@
+import { CartComponent } from '../components'
 import { MainTemplate } from '../templates'
 
 export function Cart() {
-	const view = `<h1>Cart</h1>`
+	const view = CartComponent()
 
 	return MainTemplate({ children: view })
 }
