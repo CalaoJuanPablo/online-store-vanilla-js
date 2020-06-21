@@ -29,7 +29,7 @@ export function CartComponent() {
 					<span class="Cart__table--headerText">Name</span>
 					<span class="Cart__table--headerText">Price</span>
 				</div>
-				${productsInCart.map((productInCart) => CartTableRow(productInCart))}
+				${productsInCart.map((productInCart) => CartTableRow(productInCart)).join('')}
 			</main>
 			<div class="Cart__buyButton">
 				<button class="btn btn-primary">Buy</button>
