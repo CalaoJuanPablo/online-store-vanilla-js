@@ -49,6 +49,13 @@ export class Router {
 		return { ...matchedRoute, params: routeParams }
 	}
 
+	push(path) {
+		const pathSplit = path.split('/')
+		const pathSegments = pathSplit.length > 1 ? pathSplit.slice(1) : ''
+
+		this.loadRoute(...pathSegments)
+	}
+
 	_loadInitialRoute() {
 		const pathnameSplit = window.location.pathname.split('/')
 		const pathSegments =
