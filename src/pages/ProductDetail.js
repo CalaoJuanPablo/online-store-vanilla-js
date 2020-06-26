@@ -2,7 +2,7 @@ import { MainTemplate } from '../templates'
 import { ProductDetailsComponent } from '../components'
 
 export function ProductDetails(params, router) {
-	const view = ProductDetailsComponent(params, router)
+	const productDetailsView = ProductDetailsComponent(params, router)
 
-	return MainTemplate({ children: view })
+	return MainTemplate({ children: productDetailsView })
 }
