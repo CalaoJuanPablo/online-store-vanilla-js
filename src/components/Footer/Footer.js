@@ -1,11 +1,9 @@
 import './Footer.scss'
 
 export function Footer() {
-	const view = `
-		<footer class="Footer">
-			<p>&copy; CalaoJuanPablo 2020</p>
-		</footer>
-	`
+	const footer = document.createElement('footer')
+	footer.classList.add('Footer')
+	footer.innerHTML = `<p>&copy; CalaoJuanPablo 2020</p>`
 
-	return view
+	return footer
 }

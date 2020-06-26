@@ -10,9 +10,10 @@ export class Router {
 		const url = `/${urlSegments.join('/')}`
 		history.pushState({}, '', url)
 
-		this.element.innerHTML = matchedRoute.getTemplate(
-			matchedRoute.params,
-			this
+		this.element.innerHTML = ''
+
+		this.element.appendChild(
+			matchedRoute.getTemplate(matchedRoute.params, this)
 		)
 	}
 

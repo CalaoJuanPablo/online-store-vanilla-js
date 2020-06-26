@@ -1,32 +1,43 @@
 import { api } from '../../../api'
+import { AddToCartButton, Image, Title, Text } from '../'
 import './Products.scss'
 
 function Product({ id, name, description, price, image }) {
-	const view = `
-		<article class="Product" id=${id}>
-			<figure class="Product__image">
-				<img src="${image}" alt="${name} image" />
-			</figure>
-			<h2 class="Product__name">
-				<a href="/product/${id}">${name}</a>
-			</h2>
-			<p class="Product__description">${description}</p>
-			<div class="Product__price">
-				<span>$${price}</span>
-				<button class="btn btn-primary">Add to Cart</button>
-			</div>
-		</article>
-	`
+	const article = document.createElement('article')
+	article.classList = 'Product'
+	article.id = id
 
-	return view
+	const productPrice = document.createElement('div')
+	productPrice.classList.add('Product__price')
+	const priceSpan = document.createElement('span')
+	priceSpan.innerHTML = `$${price}`
+
+	productPrice.appendChild(priceSpan)
+	productPrice.appendChild(AddToCartButton(id))
+
+	article.appendChild(
+		Image({ className: 'Product__image', src: image, alt: name })
+	)
+	article.appendChild(
+		Title({
+			variant: 'h2',
+			className: 'Product__name',
+			innerText: name
+		})
+	)
+	article.appendChild(
+		Text({ className: 'Product__description', innerText: description })
+	)
+	article.appendChild(productPrice)
+
+	return article
 }
 
 export function Products(params, router) {
-	const view = `
-		<main class="Products">
-			${api.data.map((product) => Product(product)).join('')}
-		</main>
-	`
+	const main = document.createElement('main')
+	main.classList.add('Products')
 
-	return view
+	api.data.forEach((product) => main.appendChild(Product(product)))
+
+	return main
 }
