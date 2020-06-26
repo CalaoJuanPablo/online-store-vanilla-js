@@ -5,9 +5,10 @@
 	@include container();
 	@include media(desktop-s) {
 		@include display-grid();
-		@include grid-template-columns(500px 1fr);
+		@include grid-template-columns(1fr 1fr);
 		@include grid-template-rows(30px 1fr 1fr);
-		gap: 30px;
+		row-gap: 30px;
+		column-gap: 60px;
 	}
 
 	&__name {
@@ -36,6 +37,12 @@
 
 	&__description {
 		margin-bottom: 20px;
+
+		@include media(tablet) {
+			font-size: 21px;
+			line-height: 1.5;
+		}
+
 		@include media(desktop-s) {
 			@include grid-column(2, 3);
 			@include grid-row(2, 3);
@@ -59,6 +66,10 @@
 		span {
 			font-size: 24px;
 			font-weight: bold;
+
+			@include media(tablet) {
+				font-size: 48px;
+			}
 
 			@include media(desktop-s) {
 				margin-bottom: 30px;
