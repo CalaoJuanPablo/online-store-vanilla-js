@@ -18,7 +18,9 @@ function CartTableRow({ id, image, name, price }) {
 
 export function CartComponent() {
 	const productsInCart = api.cart
-	const view = `
+	const view = document.createElement('section')
+	view.classList.add('Cart')
+	view.innerHTML = `
 		<section class="Cart">
 			<h1>Cart</h1>
 			<h3>Products you are about to shop</h3>
