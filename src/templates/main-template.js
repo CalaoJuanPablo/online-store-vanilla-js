@@ -1,16 +1,11 @@
 import { Header } from '../components'
 import { Footer } from '../components'
 
-export function MainTemplate({ children }) {
+export function MainTemplate({ children }, router) {
 	const mainTemplate = document.createElement('div')
-	mainTemplate.appendChild(Header())
+	mainTemplate.appendChild(Header(router))
 	mainTemplate.appendChild(children)
 	mainTemplate.appendChild(Footer())
-	const view = `
-		${Header()}
-		${children}
-		${Footer()}
-	`
 
 	return mainTemplate
 }
