@@ -114,7 +114,7 @@ class API {
 	}
 
 	getProduct(productId) {
-		const productFound = this.data.filter((product) => {
+		const [productFound] = this.data.filter((product) => {
 			return product.id == productId
 		})
 
