@@ -3,6 +3,10 @@ export class Router {
 		this.routes = routes
 		this.element = element
 		this._loadInitialRoute()
+
+		window.onpopstate = () => {
+			this._loadInitialRoute()
+		}
 	}
 
 	loadRoute(...urlSegments) {

@@ -1,3 +1,4 @@
+@import '../../scss/variables';
 @import '../../scss/mixins';
 
 .Product {
@@ -9,6 +10,14 @@
 
 		img {
 			width: 100%;
+		}
+	}
+
+	&__name {
+		cursor: pointer;
+		display: inline-block;
+		&:hover {
+			color: $color-secondary;
 		}
 	}
 
